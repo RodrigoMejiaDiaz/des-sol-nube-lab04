@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mi aplicación</title>
+  </head>
+  <body>
+    <h1>Des. Sol. Nube - Laboratorio 04</h1>
+    <button onclick="location.href='/'">Principal</button>
+    <button onclick="location.href='/productos'">Ver productos</button>
+    <button onclick="location.href='/clientes'">Ver clientes</button>
+
+    <hr />
+
+    <h2>Productos</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Precio</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% productos.forEach(function(producto) { %>
+        <tr>
+          <td><%= producto.id %></td>
+          <td><%= producto.nombre %></td>
+          <td><%= producto.precio %></td>
+        </tr>
+        <% }); %>
+      </tbody>
+    </table>
+    <button onclick="location.href='/productos'">Ver más productos</button>
+
+    <hr />
+
+    <h2>Clientes</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Correo electrónico</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% clientes.forEach(function(cliente) { %>
+        <tr>
+          <td><%= cliente.id %></td>
+          <td><%= cliente.nombre %></td>
+          <td><%= cliente.correo %></td>
+        </tr>
+        <% }); %>
+      </tbody>
+    </table>
+    <button onclick="location.href='/clientes'">Ver más clientes</button>
+  </body>
+</html>
